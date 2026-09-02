@@ -5,14 +5,6 @@ An automated, event-driven serverless pipeline designed to process text files up
 ---
 
 ## Architecture Overview
-
-```text
-+------------------+         +--------------------+         +--------------------+         +------------------+
-|   Amazon S3      |         |     AWS Lambda     |         |     Amazon SNS     |         |  Email Inbox     |
-| (File Upload)    | ------> | (Word Count Logic) | ------> |  (Notification)    | ------> |  (Notification)  |
-+------------------+         +--------------------+         +--------------------+         +------------------+
-```
-
 ![AWS Infrastructure Diagram](./images/00-infrastructure.png)
 
 1. **Ingestion Layer:** A text file (`.txt`) is uploaded to a dedicated Amazon S3 bucket.
